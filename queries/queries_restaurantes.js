@@ -13,12 +13,12 @@
 /*13*/Sprint2.restaurantes.find({ $and: [{cuisine: {$ne: "American"}},{"grades.grade": "A"},{borough: {$ne: "Brooklyn"}}]}).sort({cuisine: -1});
 /*14*/Sprint2.restaurantes.find({name: { $regex: /^Wil/, $options: "i"}},{restaurant_id:1, name: 1, borough: 1, cuisine:1, _id:0});
 /*15*/Sprint2.restaurantes.find({name: {$regex: /ces$/, $options: "i"}}, {restaurant_id: 1, name: 1, borough:1, cuisine: 1, _id:0 });
-/*16*/Sprint2.restaurantes.find({});
-/*17*/Sprint2.restaurantes.
-/*18*/Sprint2.restaurantes.
-/*19*/Sprint2.restaurantes.
-/*20*/Sprint2.restaurantes.
-/*21*/Sprint2.restaurantes.
+/*16*/Sprint2.restaurantes.find({name: {$regex: /Reg/, $options: "i"}},{restaurant_id: 1, name: 1, cuisine: 1, _id:0});
+/*17*/Sprint2.restaurantes.find({borough: "Bronx", cuisine: {$in: ["American", "Chinese"]}}, {restaurant_id: 1, name:1, borough: 1, cuisine:1, _id:0})
+/*18*/Sprint2.restaurantes.find({borough: {$in: ["Staten Island", "Queens", "Bronx", "Brooklyn"]}},{restaurant_id: 1, name: 1, borough:1, cuisine: 1, _id:0});
+/*19*/Sprint2.restaurantes.find({borough: {$nin: ["Staten Island", "Queens", "Bronx", "Brooklyn"]}},{restaurant_id:1, name: 1, borough: 1, cuisine: 1, _id: 0});
+/*20*/Sprint2.restaurantes.find({"grades.score": {$lt:10}}, {restaurant_id:1, name:1, borough:1, cuisine: 1, _id:0});
+/*21*/Sprint2.restaurantes.find({});
 /*22*/Sprint2.restaurantes.
 /*23*/Sprint2.restaurantes.
 /*24*/Sprint2.restaurantes.
