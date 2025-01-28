@@ -25,3 +25,4 @@
     <u><h4> Estructuras </h4></u>
     Una òptica, anomenada “Cul d'Ampolla”, vol informatitzar la gestió dels clients/es i vendes d'ulleres.<br>
     · <a href="estructura/Ejercicio1/">Estructura ejercicio #1</a>: *"Imagina que tenim la següent interfície gràfica, des del punt de vista d’un client de l'Òptica. Com dissenyaries la base de dades que facilités la informació?"*<br>
+    · <a href="estructura/Ejercicio2/">Estructura ejercicio #2</a>: *"I si el punt de vista fos de la interfície fossin les ulleres?"*<br>
