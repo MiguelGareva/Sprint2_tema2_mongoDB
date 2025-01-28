@@ -22,3 +22,6 @@
 **<h3>#Descripción ejercicios:</h3>**
     <u><h4> Queries </h4></u>
     · <a href="queries/queries_restaurantes.js">Queries Mongo Restaurantes</a>: *"Tenim una col·lecció d'Objectes Restaurant a la ciutat de Nova York, i necessitem algunes consultes... pots ajudar-nos?"*<br>
+    <u><h4> Estructuras </h4></u>
+    Una òptica, anomenada “Cul d'Ampolla”, vol informatitzar la gestió dels clients/es i vendes d'ulleres.<br>
+    · <a href="estructura/Ejercicio1/">Estructura ejercicio #1</a>: *"Imagina que tenim la següent interfície gràfica, des del punt de vista d’un client de l'Òptica. Com dissenyaries la base de dades que facilités la informació?"*<br>

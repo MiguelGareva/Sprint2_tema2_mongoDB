@@ -1,0 +1,160 @@
+db.createCollection('Cliente', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Cliente',
+      properties: {
+        nombre: {
+          bsonType: 'string'
+        },
+        datos: {
+          bsonType: 'object',
+          title: 'object',
+          properties: {
+            direccion: {
+              bsonType: 'string'
+            },
+            telefono: {
+              bsonType: 'int'
+            },
+            e - mail: {
+              bsonType: 'string'
+            },
+            fecha_registro: {
+              bsonType: 'timestamp'
+            }
+          }
+        },
+        ultimas_compras: {
+          bsonType: 'object',
+          title: 'object',
+          properties: {
+            gafas: {
+              bsonType: 'object',
+              title: 'object',
+              properties: {
+                marca: {
+                  bsonType: 'string'
+                },
+                graduacion_cristal_i: {
+                  bsonType: 'double'
+                },
+                graduacion_cristal_d: {
+                  bsonType: 'double'
+                },
+                montura: {
+                  enum: flotante,
+                  pasta,
+                  metálica
+                },
+                color_cristal_i: {
+                  bsonType: 'string'
+                },
+                color_cristal_d: {
+                  bsonType: 'string'
+                },
+                precio: {
+                  bsonType: 'double'
+                },
+                id_proveedor: {
+                  bsonType: 'objectId'
+                }
+              }
+            }
+          }
+        },
+        _id_cliente_recomendacion: {
+          bsonType: 'objectId'
+        }
+      }
+    }
+  }
+});
+db.createCollection('Proveedor', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Proveedor',
+      properties: {
+        nombre: {
+          bsonType: 'string'
+        },
+        direccion: {
+          bsonType: 'object',
+          title: 'object',
+          properties: {
+            calle: {
+              bsonType: 'string'
+            },
+            numero: {
+              bsonType: 'int'
+            },
+            piso: {
+              bsonType: 'string'
+            },
+            puerta: {
+              bsonType: 'string'
+            },
+            codigo_postal: {
+              bsonType: 'int'
+            },
+            ciudad: {
+              bsonType: 'string'
+            },
+            pais: {
+              bsonType: 'string'
+            }
+          }
+        },
+        telefono: {
+          bsonType: 'int'
+        },
+        fax: {
+          bsonType: 'int'
+        },
+        NIF: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+db.createCollection('Venta', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Venta',
+      properties: {
+        fecha: {
+          bsonType: 'timestamp'
+        },
+        importe_total: {
+          bsonType: 'double'
+        },
+        id_empleado: {
+          bsonType: 'objectId'
+        },
+        id_cliente: {
+          bsonType: 'objectId'
+        },
+        articulos: {
+          bsonType: 'objectId'
+        }
+      }
+    }
+  }
+});
+db.createCollection('empleado', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'empleado',
+      properties: {
+        nombre: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+Generated: 18 / 4 / 2024 | 15: 17: 58 by Moon Modeler - www.datensen.com
