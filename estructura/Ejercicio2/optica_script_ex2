@@ -1,0 +1,129 @@
+db.createCollection('gafas', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'gafas',
+      properties: {
+        marca: {
+          bsonType: 'string'
+        },
+        montura: {
+          enum: flotante,
+          pasta,
+          metállica
+        },
+        precio: {
+          bsonType: 'double'
+        },
+        proveedor: {
+          bsonType: 'object',
+          title: 'object',
+          properties: {
+            nombre: {
+              bsonType: 'string'
+            },
+            direccion: {
+              bsonType: 'object',
+              title: 'object',
+              properties: {
+                calle: {
+                  bsonType: 'string'
+                },
+                numero: {
+                  bsonType: 'int'
+                },
+                piso: {
+                  bsonType: 'string'
+                },
+                puerta: {
+                  bsonType: 'string'
+                },
+                codigo_postal: {
+                  bsonType: 'int'
+                },
+                ciudad: {
+                  bsonType: 'string'
+                },
+                pais: {
+                  bsonType: 'string'
+                }
+              }
+            },
+            telefono: {
+              bsonType: 'int'
+            },
+            fax: {
+              bsonType: 'int'
+            },
+            NIF: {
+              bsonType: 'string'
+            }
+          }
+        },
+        comprador: {
+          bsonType: 'object',
+          title: 'object',
+          properties: {
+            nombre: {
+              bsonType: 'string'
+            },
+            direccion_postal: {
+              bsonType: 'string'
+            },
+            telefono: {
+              bsonType: 'int'
+            },
+            e - mail: {
+              bsonType: 'string'
+            },
+            fecha_registro: {
+              bsonType: 'timestamp'
+            },
+            id_cliente_recomendacion: {
+              bsonType: 'objectId'
+            }
+          }
+        }
+      }
+    }
+  }
+});
+db.createCollection('Venta', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Venta',
+      properties: {
+        fecha: {
+          bsonType: 'timestamp'
+        },
+        importe_total: {
+          bsonType: 'double'
+        },
+        id_empleado: {
+          bsonType: 'objectId'
+        },
+        id_cliente: {
+          bsonType: 'objectId'
+        },
+        articulos: {
+          bsonType: 'objectId'
+        }
+      }
+    }
+  }
+});
+db.createCollection('empleado', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'empleado',
+      properties: {
+        nombre: {
+          bsonType: 'string'
+        }
+      }
+    }
+  }
+});
+Generated: 28 / 1 / 2025 | 13: 47: 51 by Moon Modeler - www.datensen.com
